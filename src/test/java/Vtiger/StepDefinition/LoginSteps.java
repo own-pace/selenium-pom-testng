@@ -18,7 +18,13 @@ public class LoginSteps extends BaseDefinition {
     @Before
     public void getScenario(Scenario sce)  {
 
+        if (extent == null) {
+            extentReport();  // Initialize report only once
+        }
+
         TcName=sce.getName();
+        logger=extent.createTest(TcName);
+
         System.out.println("Current Test Case Name: " + TcName);
     }
 
@@ -26,8 +32,12 @@ public class LoginSteps extends BaseDefinition {
     @After
     public void saveReport()
     {
-       // extent.flush();
-      // driver.quit();
+        if (extent != null) {
+            extent.flush();
+        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
 

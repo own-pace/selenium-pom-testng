@@ -45,7 +45,7 @@ public class LeadPage extends HeaderPage {
         sendText(lastName,last,"last name is entered");
         sendText(companyName,com,"company name is entered");
         clickElement(save,"clicked on save button");
-        
+
 
 
 
