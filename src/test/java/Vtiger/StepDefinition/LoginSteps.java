@@ -47,7 +47,7 @@ public class LoginSteps extends BaseDefinition {
     public void user_is_on_the_login_page() throws IOException {
         launchApp();
         pom= new PageObjectManager(driver,logger);
-        logger=extent.createTest(TcName);
+        //logger=extent.createTest(TcName);
 
 
     }
