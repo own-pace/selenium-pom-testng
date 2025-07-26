@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
        // dryRun = true,
         glue = "Vtiger.StepDefinition",
         plugin= {"pretty","html:target/cucumber-html-report.html","json:target/cucumber.json"}
-        , tags="@regression"
+        , tags="@sanity"
 
 
     
